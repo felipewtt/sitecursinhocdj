@@ -108,6 +108,19 @@
         }
     });
 
+    $(".categories__item").on("click", function () {
+
+        var category = $(this).data("category");
+
+        if (category === "all") {
+            $(".product-filter").show();
+        } else {
+            $(".product-filter").hide();
+            $('.product-filter[data-category="' + category + '"]').show();
+        }
+
+    });
+
     /*-----------------------------
         Testimonial Slider
     -------------------------------*/
