@@ -727,6 +727,9 @@ ol {
 
 .categories__item__icon span {
   color: #f08632;
+  display: block;
+  font-size: 56px;
+  margin-bottom: 15px;
   -webkit-transition: all, 0.2s;
   -o-transition: all, 0.2s;
   transition: all, 0.2s;
