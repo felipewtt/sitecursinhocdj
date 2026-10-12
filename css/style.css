@@ -111,7 +111,7 @@ ol {
 }
 
 .section-title span {
-  color: #f08632;
+  color: #8C1FAC;
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
@@ -161,7 +161,7 @@ ol {
   text-transform: uppercase;
   padding: 14px 30px;
   color: #ffffff;
-  background: #f08632;
+  background: #8C1FAC;
   letter-spacing: 2px;
 }
 
@@ -316,7 +316,7 @@ ol {
   Header
 -----------------------*/
 .header {
-  background: #f08632;
+  background: #8C1FAC;
 }
 
 .header__top {
@@ -586,7 +586,7 @@ ol {
   top: 15px;
   height: calc(100% - 30px);
   width: calc(100% - 30px);
-  border: 1px dashed #f08632;
+  border: 1px dashed #8C1FAC;
   content: "";
   opacity: 0.3;
 }
@@ -661,7 +661,7 @@ ol {
 
 .categories__slider.owl-carousel .owl-stage-outer {
   padding-bottom: 40px;
-  border-bottom: 1px solid rgba(240, 135, 50, 0.5);
+  border-bottom: 1px solid rgba(140, 31, 172, 0.5);
 }
 
 .categories__slider.owl-carousel .owl-nav button {
@@ -697,8 +697,8 @@ ol {
   bottom: -48px;
   width: 15px;
   height: 15px;
-  border: 1px solid #f08632;
-  border-color: transparent #f08632 #f08632 transparent;
+  border: 1px solid #8C1FAC;
+  border-color: transparent #8C1FAC #8C1FAC transparent;
   content: "";
   -webkit-transform: rotate(-135deg);
   -ms-transform: rotate(-135deg);
@@ -710,7 +710,7 @@ ol {
 }
 
 .categories__item:hover {
-  background: #f08632;
+  background: #8C1FAC;
 }
 
 .categories__item:hover:after {
@@ -726,7 +726,7 @@ ol {
 }
 
 .categories__item__icon span {
-  color: #f08632;
+  color: #8C1FAC;
   display: block;
   font-size: 56px;
   margin-bottom: 15px;
@@ -749,7 +749,7 @@ ol {
   Class
 -----------------------*/
 .class {
-  background: rgba(240, 135, 50, 0.1);
+  background: rgba(140, 31, 172, 0.1);
   position: relative;
   padding-bottom: 0;
 }
@@ -844,7 +844,7 @@ ol {
   display: inline-block;
   width: 70px;
   height: 70px;
-  background: #f08632;
+  background: #8C1FAC;
   font-size: 24px;
   color: #ffffff;
   line-height: 70px;
@@ -922,7 +922,7 @@ ol {
   Testimonial
 -----------------------*/
 .testimonial {
-  background: #fdf3ea;
+  background: #f6ebf9;
   padding-top: 90px;
   padding-bottom: 70px;
 }
@@ -1134,7 +1134,7 @@ ol {
 }
 
 .product__item:hover .product__item__pic .product__label span {
-  background: #f08632;
+  background: #8C1FAC;
   color: #ffffff;
 }
 
@@ -1219,7 +1219,7 @@ ol {
   font-size: 16px;
   font-weight: 600;
   display: inline-block;
-  border-bottom: 2px solid #f08632;
+  border-bottom: 2px solid #8C1FAC;
   padding-bottom: 4px;
 }
 
@@ -1361,7 +1361,7 @@ ol {
 
 .footer__newslatter form button {
   font-size: 20px;
-  color: #f08632;
+  color: #8C1FAC;
   background: transparent;
   border: none;
   position: absolute;
@@ -1384,11 +1384,11 @@ ol {
 }
 
 .copyright__text i {
-  color: #f08632;
+  color: #8C1FAC;
 }
 
 .copyright__text a {
-  color: #f08632;
+  color: #8C1FAC;
 }
 
 .copyright__widget {
@@ -1527,7 +1527,7 @@ ol {
   display: inline-block;
   width: 70px;
   height: 70px;
-  background: #f08632;
+  background: #8C1FAC;
   font-size: 24px;
   color: #ffffff;
   line-height: 70px;
@@ -1854,7 +1854,7 @@ ol {
   font-size: 20px;
   border: 1px solid #e1e1e1;
   display: inline-block;
-  color: #f08632;
+  color: #8C1FAC;
   padding: 14px;
   line-height: 16px;
 }
@@ -2131,7 +2131,7 @@ ol {
 }
 
 .cart__total {
-  background: #fdf3ea;
+  background: #f6ebf9;
   padding: 35px 40px 40px;
 }
 
@@ -2157,7 +2157,7 @@ ol {
 
 .cart__total ul li span {
   font-weight: 600;
-  color: #e26b0c;
+  color: #6A1584;
   float: right;
 }
 
@@ -2183,7 +2183,7 @@ ol {
 }
 
 .coupon__code span {
-  color: #f08632;
+  color: #8C1FAC;
 }
 
 .coupon__code a {
@@ -2210,7 +2210,7 @@ ol {
 }
 
 .checkout__input p span {
-  color: #f08632;
+  color: #8C1FAC;
 }
 
 .checkout__input input {
@@ -2260,7 +2260,7 @@ ol {
 }
 
 .checkout__input__checkbox label input:checked~.checkmark {
-  border-color: #f08632;
+  border-color: #8C1FAC;
 }
 
 .checkout__input__checkbox label input:checked~.checkmark:after {
@@ -2284,7 +2284,7 @@ ol {
   top: -3px;
   width: 14px;
   height: 7px;
-  border: solid #f08632;
+  border: solid #8C1FAC;
   border-width: 1.5px 1.5px 0px 0px;
   -webkit-transform: rotate(127deg);
   -ms-transform: rotate(127deg);
@@ -2301,7 +2301,7 @@ ol {
 }
 
 .checkout__order {
-  background: #fdf3ea;
+  background: #f6ebf9;
   padding: 30px;
 }
 
@@ -2384,7 +2384,7 @@ ol {
 }
 
 .checkout__total__all li span {
-  color: #f08632;
+  color: #8C1FAC;
   float: right;
 }
 
@@ -2492,7 +2492,7 @@ ol {
 }
 
 .class__item:hover .class__item__pic .label {
-  background: #f08632;
+  background: #8C1FAC;
 }
 
 .class__item:hover .class__item__text h5 a {
@@ -2549,12 +2549,12 @@ ol {
 
 .class__item__text .read_more {
   font-size: 16px;
-  color: #f08632;
+  color: #8C1FAC;
   font-weight: 600;
 }
 
 .class__sidebar {
-  background: #fdf3ea;
+  background: #f6ebf9;
   padding: 30px;
 }
 
@@ -2661,7 +2661,7 @@ ol {
   font-size: 14px;
   color: #ffffff;
   font-weight: 600;
-  background: #f08632;
+  background: #8C1FAC;
   display: inline-block;
   padding: 4px 15px 2px;
 }
@@ -2723,7 +2723,7 @@ ol {
   letter-spacing: 2px;
   text-transform: uppercase;
   padding-bottom: 3px;
-  border-bottom: 2px solid #f08632;
+  border-bottom: 2px solid #8C1FAC;
 }
 
 /*---------------------
@@ -2802,7 +2802,7 @@ ol {
   top: 5px;
   height: 14px;
   width: 10px;
-  background: rgba(226, 108, 12, 0.3);
+  background: rgba(106, 21, 132, 0.3);
   content: "";
 }
 
@@ -2842,7 +2842,7 @@ ol {
 }
 
 .blog__sidebar__item .blog__sidebar__item__categories ul li:hover a span {
-  color: #f08632;
+  color: #8C1FAC;
 }
 
 .blog__sidebar__item .blog__sidebar__item__categories ul li a {
@@ -2905,7 +2905,7 @@ ol {
 }
 
 .blog__sidebar__item form label input:checked~.checkmark {
-  border-color: #f08632;
+  border-color: #8C1FAC;
 }
 
 .blog__sidebar__item form label input:checked~.checkmark:after {
@@ -2929,7 +2929,7 @@ ol {
   top: -3px;
   width: 14px;
   height: 7px;
-  border: solid #f08632;
+  border: solid #8C1FAC;
   border-width: 1.5px 1.5px 0px 0px;
   -webkit-transform: rotate(127deg);
   -ms-transform: rotate(127deg);
@@ -3189,7 +3189,7 @@ ol {
 
 .blog__details__print .primary-btn {
   background: transparent;
-  border: 1px solid #f08632;
+  border: 1px solid #8C1FAC;
   color: #111111;
 }
 
@@ -3259,7 +3259,7 @@ ol {
 
 .blog__details__author {
   position: relative;
-  background: #fdf3ea;
+  background: #f6ebf9;
   overflow: hidden;
   padding: 50px;
   margin-bottom: 85px;
@@ -3330,12 +3330,12 @@ ol {
   top: 5px;
   height: 14px;
   width: 10px;
-  background: rgba(226, 108, 12, 0.3);
+  background: rgba(106, 21, 132, 0.3);
   content: "";
 }
 
 .blog__details__comment .primary-btn {
-  background: rgba(226, 108, 12, 0.2);
+  background: rgba(106, 21, 132, 0.2);
   color: #111111;
   position: absolute;
   right: 0;
