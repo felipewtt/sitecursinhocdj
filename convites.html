@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convidar professor</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      padding: 16px;
+    }
+
+    .card {
+      background: #fff;
+      width: 100%;
+      max-width: 440px;
+      padding: 40px 32px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+    }
+
+    h1 { font-size: 1.6rem; color: #1f2937; text-align: center; }
+    .subtitle { text-align: center; color: #6b7280; margin: 6px 0 28px; font-size: .95rem; }
+
+    .field { margin-bottom: 18px; }
+    label { display: block; font-size: .85rem; font-weight: 600; color: #374151; margin-bottom: 6px; }
+    .dica { font-weight: 400; color: #6b7280; }
+
+    input[type="email"], input[type="text"], select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      background: #fff;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    input:focus, select:focus { border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79, 70, 229, .15); }
+    input.invalid { border-color: #dc2626; }
+
+    .error-msg { color: #dc2626; font-size: .8rem; margin-top: 5px; min-height: 1em; }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 13px;
+      background: #4f46e5;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    button[type="submit"]:hover:not(:disabled) { background: #4338ca; }
+    button[type="submit"]:disabled { opacity: .7; cursor: not-allowed; }
+
+    .form-feedback {
+      margin-top: 16px; padding: 10px 12px; border-radius: 8px;
+      font-size: .9rem; text-align: center; display: none;
+    }
+    .form-feedback.error { display: block; background: #fee2e2; color: #991b1b; }
+
+    .resultado {
+      display: none; margin-top: 22px; padding: 16px; border-radius: 10px;
+      background: #f0fdf4; border: 1px solid #bbf7d0;
+    }
+    .resultado.show { display: block; }
+    .resultado h2 { font-size: .95rem; color: #166534; margin-bottom: 10px; }
+    .link-row { display: flex; gap: 8px; }
+    .link-row input { flex: 1; font-size: .85rem; padding: 10px 12px; }
+    .link-row button {
+      padding: 0 16px; border: none; border-radius: 8px; cursor: pointer;
+      background: #166534; color: #fff; font-weight: 600; font-size: .85rem;
+    }
+    .validade { margin-top: 10px; font-size: .8rem; color: #166534; }
+  </style>
+</head>
+<body>
+
+  <main class="card">
+    <h1>Convidar professor</h1>
+    <p class="subtitle">Gere um link de cadastro de uso único</p>
+
+    <form id="conviteForm" novalidate>
+      <div class="field">
+        <label for="emailConvidado">E-mail do professor <span class="dica">(opcional)</span></label>
+        <input type="email" id="emailConvidado" placeholder="professor@exemplo.com" autocomplete="off">
+        <div class="error-msg" id="emailError"></div>
+      </div>
+
+      <div class="field">
+        <label for="validade">Validade do convite</label>
+        <select id="validade">
+          <option value="1">1 dia</option>
+          <option value="3">3 dias</option>
+          <option value="7" selected>7 dias</option>
+          <option value="30">30 dias</option>
+        </select>
+      </div>
+
+      <button type="submit" id="btnGerar">Gerar convite</button>
+      <div class="form-feedback" id="feedback" role="alert"></div>
+    </form>
+
+    <div class="resultado" id="resultado">
+      <h2>Convite gerado! Envie este link ao professor:</h2>
+      <div class="link-row">
+        <input type="text" id="linkConvite" readonly>
+        <button type="button" id="btnCopiar">Copiar</button>
+      </div>
+      <p class="validade" id="validadeTexto"></p>
+    </div>
+  </main>
+
+  <script src="convites.js"></script>
+</body>
+</html>

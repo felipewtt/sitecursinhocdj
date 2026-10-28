@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      padding: 16px;
+    }
+
+    .card {
+      background: #fff;
+      width: 100%;
+      max-width: 400px;
+      padding: 40px 32px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+    }
+
+    h1 { font-size: 1.6rem; color: #1f2937; text-align: center; }
+    .subtitle { text-align: center; color: #6b7280; margin: 6px 0 28px; font-size: .95rem; }
+
+    .field { margin-bottom: 18px; }
+    label { display: block; font-size: .85rem; font-weight: 600; color: #374151; margin-bottom: 6px; }
+
+    .input-wrap { position: relative; }
+    input[type="email"], input[type="password"], input[type="text"] {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    input:focus { border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79, 70, 229, .15); }
+    input.invalid { border-color: #dc2626; }
+
+    .toggle-pass {
+      position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; cursor: pointer;
+      color: #6b7280; font-size: .8rem; font-weight: 600; padding: 4px;
+    }
+
+    .error-msg { color: #dc2626; font-size: .8rem; margin-top: 5px; min-height: 1em; }
+
+    .cargos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .cargos input { position: absolute; opacity: 0; pointer-events: none; }
+    .cargos label {
+      margin: 0; padding: 10px 6px; text-align: center; cursor: pointer;
+      border: 1.5px solid #d1d5db; border-radius: 8px;
+      font-size: .85rem; font-weight: 600; color: #374151;
+      transition: border-color .2s, background .2s, color .2s;
+    }
+    .cargos label:hover { border-color: #4f46e5; }
+    .cargos input:checked + label { background: #eef2ff; border-color: #4f46e5; color: #4338ca; }
+    .cargos input:focus-visible + label { box-shadow: 0 0 0 3px rgba(79, 70, 229, .25); }
+
+    .row {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: .85rem; margin-bottom: 22px;
+    }
+    .row label { display: flex; align-items: center; gap: 6px; margin: 0; font-weight: 400; cursor: pointer; }
+    .row a { color: #4f46e5; text-decoration: none; }
+    .row a:hover { text-decoration: underline; }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 13px;
+      background: #4f46e5;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    button[type="submit"]:hover:not(:disabled) { background: #4338ca; }
+    button[type="submit"]:disabled { opacity: .7; cursor: not-allowed; }
+
+    .form-feedback {
+      margin-top: 16px; padding: 10px 12px; border-radius: 8px;
+      font-size: .9rem; text-align: center; display: none;
+    }
+    .form-feedback.error { display: block; background: #fee2e2; color: #991b1b; }
+    .form-feedback.success { display: block; background: #dcfce7; color: #166534; }
+
+    .signup { text-align: center; margin-top: 22px; font-size: .9rem; color: #6b7280; }
+    .signup a { color: #4f46e5; font-weight: 600; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <main class="card">
+    <h1>Bem-vindo de volta</h1>
+    <p class="subtitle">Entre na sua conta para continuar</p>
+
+    <form id="loginForm" novalidate>
+      <div class="field">
+        <label id="cargoLabel">Entrar como</label>
+        <div class="cargos" role="radiogroup" aria-labelledby="cargoLabel">
+          <input type="radio" name="cargo" id="cargoAluno" value="aluno" checked>
+          <label for="cargoAluno">Aluno</label>
+
+          <input type="radio" name="cargo" id="cargoProfessor" value="professor">
+          <label for="cargoProfessor">Professor</label>
+
+          <input type="radio" name="cargo" id="cargoCoordenacao" value="coordenacao">
+          <label for="cargoCoordenacao">Coordenação</label>
+        </div>
+        <div class="error-msg" id="cargoError"></div>
+      </div>
+
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="voce@exemplo.com" autocomplete="email">
+        <div class="error-msg" id="emailError"></div>
+      </div>
+
+      <div class="field">
+        <label for="senha">Senha</label>
+        <div class="input-wrap">
+          <input type="password" id="senha" name="senha" placeholder="Sua senha" autocomplete="current-password">
+          <button type="button" class="toggle-pass" id="togglePass" aria-label="Mostrar senha">Mostrar</button>
+        </div>
+        <div class="error-msg" id="senhaError"></div>
+      </div>
+
+      <div class="row">
+        <label><input type="checkbox" id="lembrar"> Lembrar de mim</label>
+        <a href="#">Esqueci a senha</a>
+      </div>
+
+      <button type="submit" id="btnEntrar">Entrar</button>
+      <div class="form-feedback" id="feedback" role="alert"></div>
+    </form>
+
+    <p class="signup">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>

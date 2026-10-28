@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      padding: 16px;
+    }
+
+    .card {
+      background: #fff;
+      width: 100%;
+      max-width: 400px;
+      padding: 40px 32px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+    }
+
+    h1 { font-size: 1.6rem; color: #1f2937; text-align: center; }
+    .subtitle { text-align: center; color: #6b7280; margin: 6px 0 28px; font-size: .95rem; }
+
+    .field { margin-bottom: 18px; }
+    label { display: block; font-size: .85rem; font-weight: 600; color: #374151; margin-bottom: 6px; }
+
+    .input-wrap { position: relative; }
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    input:focus { border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79, 70, 229, .15); }
+    input.invalid { border-color: #dc2626; }
+
+    .toggle-pass {
+      position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; cursor: pointer;
+      color: #6b7280; font-size: .8rem; font-weight: 600; padding: 4px;
+    }
+
+    .error-msg { color: #dc2626; font-size: .8rem; margin-top: 5px; min-height: 1em; }
+
+    .forca { height: 6px; background: #e5e7eb; border-radius: 3px; margin-top: 8px; overflow: hidden; }
+    #forcaBarra { height: 100%; width: 0; transition: width .25s, background .25s; }
+    #forcaTexto { font-size: .78rem; color: #6b7280; margin-top: 4px; min-height: 1em; }
+
+    .termos { margin-bottom: 22px; font-size: .85rem; }
+    .termos label { display: flex; align-items: center; gap: 6px; margin: 0; font-weight: 400; cursor: pointer; }
+    .termos a { color: #4f46e5; text-decoration: none; }
+    .termos a:hover { text-decoration: underline; }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 13px;
+      background: #4f46e5;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    button[type="submit"]:hover:not(:disabled) { background: #4338ca; }
+    button[type="submit"]:disabled { opacity: .7; cursor: not-allowed; }
+
+    .form-feedback {
+      margin-top: 16px; padding: 10px 12px; border-radius: 8px;
+      font-size: .9rem; text-align: center; display: none;
+    }
+    .form-feedback.error { display: block; background: #fee2e2; color: #991b1b; }
+    .form-feedback.success { display: block; background: #dcfce7; color: #166534; }
+    .form-feedback.success a { display: inline-block; margin-top: 6px; color: #166534; font-weight: 700; text-decoration: underline; }
+
+    .convite-banner {
+      display: none; margin-bottom: 20px; padding: 10px 12px; border-radius: 8px;
+      background: #eef2ff; color: #3730a3; font-size: .88rem; text-align: center;
+    }
+    .convite-banner.show { display: block; }
+    input[readonly] { background: #f3f4f6; color: #6b7280; }
+
+    .login-link { text-align: center; margin-top: 22px; font-size: .9rem; color: #6b7280; }
+    .login-link a { color: #4f46e5; font-weight: 600; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <main class="card">
+    <h1>Crie sua conta</h1>
+    <p class="subtitle">Preencha os dados para se cadastrar</p>
+
+    <div class="convite-banner" id="conviteBanner" role="status"></div>
+
+    <form id="cadastroForm" novalidate>
+      <div class="field">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" autocomplete="name">
+        <div class="error-msg" id="nomeError"></div>
+      </div>
+
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="voce@exemplo.com" autocomplete="email">
+        <div class="error-msg" id="emailError"></div>
+      </div>
+
+      <div class="field">
+        <label for="senha">Senha</label>
+        <div class="input-wrap">
+          <input type="password" id="senha" name="senha" placeholder="Mínimo 8 caracteres" autocomplete="new-password">
+          <button type="button" class="toggle-pass" data-alvo="senha" aria-label="Mostrar senha">Mostrar</button>
+        </div>
+        <div class="forca"><div id="forcaBarra"></div></div>
+        <div id="forcaTexto"></div>
+        <div class="error-msg" id="senhaError"></div>
+      </div>
+
+      <div class="field">
+        <label for="confirmar">Confirmar senha</label>
+        <div class="input-wrap">
+          <input type="password" id="confirmar" name="confirmar" placeholder="Repita a senha" autocomplete="new-password">
+          <button type="button" class="toggle-pass" data-alvo="confirmar" aria-label="Mostrar senha">Mostrar</button>
+        </div>
+        <div class="error-msg" id="confirmarError"></div>
+      </div>
+
+      <div class="termos">
+        <label><input type="checkbox" id="termos"> Li e aceito os <a href="#">termos de uso</a></label>
+        <div class="error-msg" id="termosError"></div>
+      </div>
+
+      <button type="submit" id="btnCadastrar">Criar conta</button>
+      <div class="form-feedback" id="feedback" role="alert"></div>
+    </form>
+
+    <p class="login-link">Já tem conta? <a href="login.html">Entrar</a></p>
+  </main>
+
+  <script src="cadastro.js"></script>
+</body>
+</html>
