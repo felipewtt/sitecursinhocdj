@@ -1028,16 +1028,6 @@ ol {
   z-index: 1;
 }
 
-.instagram__text h5:after {
-  position: absolute;
-  left: 0;
-  top: -34px;
-  background: url(../img/instagram/cake-piece.png) no-repeat;
-  height: 139px;
-  width: 114px;
-  content: "";
-}
-
 .instagram__text h5 i {
   color: #111111;
   font-size: 36px;
