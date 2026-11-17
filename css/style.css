@@ -4724,3 +4724,49 @@ ol {
     margin-top: 30px;
   }
 }
+
+/*---------------------
+  História (página Sobre)
+-----------------------*/
+.historia h4 {
+  color: #111111;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 36px 0 12px;
+}
+
+.historia p {
+  color: #444444;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.historia blockquote {
+  border-left: 4px solid #8C1FAC;
+  background: rgba(140, 31, 172, 0.08);
+  padding: 20px 24px;
+  margin: 24px 0;
+  font-style: italic;
+  color: #111111;
+  line-height: 1.7;
+}
+
+.historia blockquote cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  color: #8C1FAC;
+}
+
+.historia__lema {
+  border-left: none;
+  background: none;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  line-height: 1.5;
+  margin-top: 48px;
+}
