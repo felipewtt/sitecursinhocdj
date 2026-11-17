@@ -155,37 +155,41 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="about__text">
                         <div class="section-title">
-                            <span>About Cake shop</span>
-                            <h2>Cakes and bakes from the house of Queens!</h2>
+                            <span>Sobre o cursinho</span>
+                            <h2>Educação popular, feita por quem acredita nela</h2>
                         </div>
-                        <p>The "Cake Shop" is a Jordanian Brand that started as a small family business. The owners are
-                            Dr. Iyad Sultan and Dr. Sereen Sharabati, supported by a staff of 80 employees.</p>
+                        <p>O Cursinho Popular Carolina Maria de Jesus nasceu em Currais Novos a partir do desejo de uma
+                            família de levar oportunidade de estudo para quem não pode pagar um cursinho particular.
+                            Hoje
+                            funciona no IFRN, de segunda a quinta, e une a preparação para o ENEM ao debate crítico.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
-                    <div class="about__bar">
-                        <div class="about__bar__item">
-                            <p>Cake design</p>
-                            <div id="bar1" class="barfiller">
-                                <div class="tipWrap"><span class="tip"></span></div>
-                                <span class="fill" data-percentage="95"></span>
-                            </div>
-                        </div>
-                        <div class="about__bar__item">
-                            <p>Cake Class</p>
-                            <div id="bar2" class="barfiller">
-                                <div class="tipWrap"><span class="tip"></span></div>
-                                <span class="fill" data-percentage="80"></span>
-                            </div>
-                        </div>
-                        <div class="about__bar__item">
-                            <p>Cake Recipes</p>
-                            <div id="bar3" class="barfiller">
-                                <div class="tipWrap"><span class="tip"></span></div>
-                                <span class="fill" data-percentage="90"></span>
-                            </div>
-                        </div>
-                    </div>
+                    <ol class="linha-tempo">
+                        <li class="linha-tempo__item">
+                            <span class="linha-tempo__data">19 de novembro de 2019</span>
+                            <h5>Fundação oficial</h5>
+                            <p>Nasce o cursinho popular em Currais Novos, inspirado na Rede Emancipa e nas ideias de
+                                Paulo Freire.</p>
+                        </li>
+                        <li class="linha-tempo__item">
+                            <span class="linha-tempo__data">7 de março de 2020</span>
+                            <h5>Primeira aula</h5>
+                            <p>306 alunos presentes, de quase 500 inscritos, na Escola Estadual Tempo Integral Tristão
+                                de Barros.</p>
+                        </li>
+                        <li class="linha-tempo__item">
+                            <span class="linha-tempo__data">2025</span>
+                            <h5>Edital do CPOP</h5>
+                            <p>O projeto é contemplado com apoio financeiro e pedagógico: bolsa mensal de R$ 200 para os
+                                alunos e remuneração para os professores.</p>
+                        </li>
+                        <li class="linha-tempo__item">
+                            <span class="linha-tempo__data">Hoje</span>
+                            <h5>No IFRN Currais Novos</h5>
+                            <p>Aulas de segunda a quinta, das 19h às 22h, com 40 alunos atendidos diretamente.</p>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </div>
@@ -719,7 +723,9 @@
                             <input type="text" id="av-nome" name="nome" placeholder="Seu nome" required>
 
                             <label for="av-ano" class="sr-only">Ano em que estudou no cursinho</label>
-                            <input type="text" id="av-ano" name="ano" placeholder="Ano em que estudou no cursinho">
+                            <select id="av-ano" name="ano" class="sem-nice" required>
+                                <option value="" disabled selected>Ano em que estudou no cursinho</option>
+                            </select>
 
                             <fieldset class="avaliacao__estrelas">
                                 <legend>Sua nota para o cursinho</legend>

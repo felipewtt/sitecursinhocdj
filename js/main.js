@@ -193,7 +193,22 @@
     /*--------------------------
         Select
     ----------------------------*/
-    $("select").niceSelect();
+    $("select").not(".sem-nice").niceSelect();
+
+    /*-----------------------------------
+    Avaliação: anos disponíveis
+------------------------------------*/
+    var $selectAno = $('#av-ano');
+    if ($selectAno.length) {
+        var PRIMEIRO_ANO = 2020; // primeiro ano do cursinho
+        var MES_FIM = 10;        // 10 = novembro (0 = janeiro). Para dezembro, use 11
+        var hoje = new Date();
+        var ultimoAno = hoje.getMonth() >= MES_FIM ? hoje.getFullYear() : hoje.getFullYear() - 1;
+
+        for (var ano = PRIMEIRO_ANO; ano <= ultimoAno; ano++) {
+            $selectAno.append($('<option>', { value: ano, text: ano }));
+        }
+    }
 
     /*------------------
         Magnific
