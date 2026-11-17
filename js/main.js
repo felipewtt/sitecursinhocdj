@@ -49,6 +49,25 @@
         $(".offcanvas-menu-overlay").removeClass("active");
     });
 
+    //Menu Minha conta (Entrar / Cadastre-se)
+    $('.conta-menu__botao').on('click', function (e) {
+        e.stopPropagation();
+        var $menu = $(this).closest('.conta-menu');
+        var abrir = !$menu.hasClass('aberto');
+
+        $('.conta-menu').removeClass('aberto')
+            .find('.conta-menu__botao').attr('aria-expanded', 'false');
+
+        if (abrir) {
+            $menu.addClass('aberto');
+            $(this).attr('aria-expanded', 'true');
+        }
+    });
+
+    $(document).on('click', function () {
+        $('.conta-menu').removeClass('aberto')
+            .find('.conta-menu__botao').attr('aria-expanded', 'false');
+    });
 
     /*------------------
         Navigation

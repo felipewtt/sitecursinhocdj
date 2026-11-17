@@ -853,6 +853,147 @@ ol {
 }
 
 /*---------------------
+  Avaliação (ex-alunos)
+-----------------------*/
+.avaliacao {
+  background: rgba(140, 31, 172, 0.1);
+}
+
+.avaliacao__form {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.avaliacao__form .section-title {
+  margin-bottom: 40px;
+}
+
+.avaliacao__form form input[type="text"],
+.avaliacao__form form textarea {
+  width: 100%;
+  font-size: 15px;
+  color: #444444;
+  background: #ffffff;
+  border: none;
+  margin-bottom: 20px;
+  font-family: inherit;
+}
+
+.avaliacao__form form input[type="text"] {
+  height: 50px;
+  padding: 0 20px;
+}
+
+.avaliacao__form form textarea {
+  height: 140px;
+  padding: 15px 20px;
+  resize: vertical;
+}
+
+.avaliacao__form form input[type="text"]::placeholder,
+.avaliacao__form form textarea::placeholder {
+  color: #444444;
+}
+
+.avaliacao__form form input[type="text"]:focus,
+.avaliacao__form form textarea:focus {
+  outline: 2px solid #8C1FAC;
+}
+
+/* Estrelas */
+.avaliacao__estrelas {
+  border: 0;
+  margin: 0 0 20px;
+  padding: 0;
+  text-align: center;
+}
+
+.avaliacao__estrelas legend {
+  font-size: 15px;
+  color: #444444;
+  margin-bottom: 4px;
+}
+
+.avaliacao__estrelas-grupo {
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+
+.avaliacao__estrelas-grupo input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.avaliacao__estrelas-grupo label {
+  position: relative;
+  display: block;
+  width: 21px;
+  height: 42px;
+  overflow: hidden;
+  color: #cfc3d6;
+  cursor: pointer;
+  margin: 0;
+  transition: color 0.2s;
+}
+
+.avaliacao__estrelas-grupo label::before {
+  content: "\2605";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  font-size: 42px;
+  line-height: 42px;
+  text-align: center;
+}
+
+/* metade direita da estrela (notas inteiras) */
+.avaliacao__estrelas-grupo label:nth-of-type(odd)::before {
+  left: -21px;
+}
+
+/* espaço entre uma estrela e outra */
+.avaliacao__estrelas-grupo label:nth-of-type(odd):not(:first-of-type) {
+  margin-right: 8px;
+}
+
+.avaliacao__estrelas-grupo input:checked~label,
+.avaliacao__estrelas-grupo label:hover,
+.avaliacao__estrelas-grupo label:hover~label {
+  color: #f5a623;
+}
+
+.avaliacao__estrelas-grupo input:focus-visible+label {
+  outline: 2px solid #8C1FAC;
+}
+
+/* Autorização */
+.avaliacao__consent {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.avaliacao__consent input {
+  margin: 4px 10px 0 0;
+  flex-shrink: 0;
+}
+
+.avaliacao__consent label {
+  font-size: 14px;
+  color: #444444;
+  margin: 0;
+}
+
+.avaliacao__form form button {
+  letter-spacing: 2px;
+  width: 100%;
+}
+
+/*---------------------
   Team
 -----------------------*/
 .team {
@@ -4432,4 +4573,43 @@ ol {
   .checkout__order__products span {
     display: none;
   }
+}
+
+/*---------------------
+  Menu Minha conta
+-----------------------*/
+.conta-menu__botao {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: #111111;
+  cursor: pointer;
+}
+
+.conta-menu__botao:focus-visible {
+  outline: 2px solid #8C1FAC;
+  outline-offset: 2px;
+}
+
+/* abre o menu ao clicar (o hover do template continua funcionando) */
+.header__top__left ul li.aberto ul,
+.offcanvas__option ul li.aberto ul {
+  top: 24px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* itens do menu um embaixo do outro, texto branco no fundo preto */
+.header__top__left ul li ul li,
+.offcanvas__option ul li ul li {
+  display: block;
+  margin-right: 0;
+  white-space: nowrap;
+}
+
+.header__top__left ul li ul li a,
+.offcanvas__option ul li ul li a {
+  display: block;
+  color: #ffffff;
 }
