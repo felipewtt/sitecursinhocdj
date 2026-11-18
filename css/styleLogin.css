@@ -1,0 +1,480 @@
+/* =========================================
+   PÁGINAS DE LOGIN E CADASTRO
+   Cursinho Popular Carolina Maria de Jesus
+========================================= */
+
+/* Configurações gerais */
+
+.auth-page,
+.auth-page * {
+    box-sizing: border-box;
+}
+
+.auth-page {
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Montserrat", sans-serif;
+
+    background: rgba(140, 31, 172, 0.07);
+    color: #111111;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Cartão principal */
+
+.auth-page .card {
+    position: relative;
+
+    width: 100%;
+    max-width: 460px;
+
+    padding: 45px 40px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(140, 31, 172, 0.15);
+    border-radius: 4px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+}
+
+/* Detalhe decorativo do cartão */
+
+.auth-page .card::before {
+    content: "";
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+
+    border: 1px dashed rgba(140, 31, 172, 0.22);
+
+    pointer-events: none;
+}
+
+/* Títulos */
+
+.auth-page h1 {
+    position: relative;
+
+    color: #111111;
+
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    font-weight: 700;
+
+    text-align: center;
+    line-height: 1.3;
+
+    margin: 0;
+}
+
+.auth-page .subtitle {
+    position: relative;
+
+    color: #777777;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+
+    text-align: center;
+
+    margin: 8px 0 30px;
+}
+
+/* Campos do formulário */
+
+.auth-page .field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.auth-page .field>label,
+.auth-page #cargoLabel {
+    display: block;
+
+    color: #333333;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.auth-page .input-wrap {
+    position: relative;
+}
+
+.auth-page input[type="text"],
+.auth-page input[type="email"],
+.auth-page input[type="password"] {
+    display: block;
+
+    width: 100%;
+    height: 48px;
+
+    padding: 0 14px;
+
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+
+    background: #ffffff;
+
+    color: #333333;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+
+    outline: none;
+
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.auth-page input::placeholder {
+    color: #aaaaaa;
+}
+
+.auth-page input:focus {
+    border-color: #8C1FAC;
+    box-shadow: 0 0 0 3px rgba(140, 31, 172, 0.10);
+}
+
+.auth-page input.invalid {
+    border-color: #dc2626;
+}
+
+.auth-page input[readonly] {
+    background: #f5f2f6;
+    color: #777777;
+}
+
+/* Botão de mostrar senha */
+
+.auth-page .toggle-pass {
+    position: absolute;
+
+    right: 12px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    padding: 5px;
+
+    background: none;
+    border: none;
+
+    color: #8C1FAC;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.auth-page .toggle-pass:hover {
+    color: #68157f;
+}
+
+/* Mensagens de erro */
+
+.auth-page .error-msg {
+    min-height: 1em;
+
+    margin-top: 5px;
+
+    color: #dc2626;
+    font-size: 11px;
+}
+
+/* Seleção de cargo - Login */
+
+.auth-page .cargos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.auth-page .cargos input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.auth-page .cargos label {
+    margin: 0;
+    padding: 12px 5px;
+
+    text-align: center;
+
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+
+    color: #555555;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.auth-page .cargos label:hover {
+    border-color: #8C1FAC;
+}
+
+.auth-page .cargos input:checked+label {
+    background: rgba(140, 31, 172, 0.09);
+    border-color: #8C1FAC;
+    color: #8C1FAC;
+}
+
+.auth-page .cargos input:focus-visible+label {
+    outline: 2px solid #8C1FAC;
+    outline-offset: 3px;
+}
+
+/* Linha do login */
+
+.auth-page .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 24px;
+
+    font-size: 11px;
+}
+
+.auth-page .row label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    margin: 0;
+
+    color: #666666;
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+.auth-page .row a,
+.auth-page .termos a {
+    color: #8C1FAC;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-page .row a:hover,
+.auth-page .termos a:hover {
+    color: #68157f;
+    text-decoration: underline;
+}
+
+/* Termos de uso - Cadastro */
+
+.auth-page .termos {
+    margin-bottom: 24px;
+    font-size: 12px;
+}
+
+.auth-page .termos label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin: 0;
+
+    color: #666666;
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+/* Indicador de força da senha */
+
+.auth-page .forca {
+    height: 5px;
+
+    margin-top: 9px;
+
+    background: #eeeeee;
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.auth-page #forcaBarra {
+    height: 100%;
+    width: 0;
+
+    transition: width 0.25s, background 0.25s;
+}
+
+.auth-page #forcaTexto {
+    min-height: 1em;
+
+    margin-top: 5px;
+
+    color: #777777;
+    font-size: 11px;
+}
+
+/* Banner de convite */
+
+.auth-page .convite-banner {
+    display: none;
+
+    margin-bottom: 20px;
+    padding: 12px;
+
+    border: 1px solid rgba(140, 31, 172, 0.2);
+    border-radius: 3px;
+
+    background: rgba(140, 31, 172, 0.07);
+
+    color: #8C1FAC;
+    font-size: 12px;
+    text-align: center;
+}
+
+.auth-page .convite-banner.show {
+    display: block;
+}
+
+/* Botão principal */
+
+.auth-page button[type="submit"] {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+
+    width: 100%;
+    padding: 15px 20px;
+
+    border: none;
+    border-radius: 0;
+
+    background: #8C1FAC;
+    color: #ffffff;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: background 0.3s;
+}
+
+.auth-page button[type="submit"]:hover:not(:disabled) {
+    background: #68157f;
+}
+
+.auth-page button[type="submit"]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Feedback do formulário */
+
+.auth-page .form-feedback {
+    display: none;
+
+    margin-top: 16px;
+    padding: 12px;
+
+    border-radius: 3px;
+
+    font-size: 12px;
+    text-align: center;
+}
+
+.auth-page .form-feedback.error {
+    display: block;
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.auth-page .form-feedback.success {
+    display: block;
+    background: #dcfce7;
+    color: #166534;
+}
+
+.auth-page .form-feedback.success a {
+    display: inline-block;
+    margin-top: 6px;
+
+    color: #166534;
+    font-weight: 700;
+}
+
+/* Links entre Login e Cadastro */
+
+.auth-page .signup,
+.auth-page .login-link {
+    position: relative;
+
+    margin: 25px 0 0;
+
+    color: #777777;
+
+    font-size: 12px;
+    text-align: center;
+}
+
+.auth-page .signup a,
+.auth-page .login-link a {
+    color: #8C1FAC;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-page .signup a:hover,
+.auth-page .login-link a:hover {
+    color: #68157f;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+
+@media (max-width: 480px) {
+
+    .auth-page {
+        padding: 20px 14px;
+    }
+
+    .auth-page .card {
+        padding: 38px 25px;
+    }
+
+    .auth-page h1 {
+        font-size: 27px;
+    }
+
+    .auth-page .cargos {
+        gap: 5px;
+    }
+
+    .auth-page .cargos label {
+        font-size: 10px;
+    }
+}
