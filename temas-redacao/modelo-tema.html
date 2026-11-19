@@ -38,35 +38,21 @@
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__cart">
-            <div class="offcanvas__cart__links">
-                <a href="#" class="search-switch"><img src="../img/icon/search.png" alt=""></a>
-                <a href="#"><img src="../img/icon/heart.png" alt=""></a>
-            </div>
-            <div class="offcanvas__cart__item">
-                <a href="#"><img src="../img/icon/cart.png" alt=""> <span>0</span></a>
-                <div class="cart__price">Cart: <span>$0.00</span></div>
-            </div>
-        </div>
         <div class="offcanvas__logo">
             <a href="../index.html"><img src="../img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__option">
             <ul>
-                <li>USD <span class="arrow_carrot-down"></span>
+                <li class="conta-menu">
+                    <button type="button" class="conta-menu__botao" aria-haspopup="true" aria-expanded="false">
+                        Minha conta <span class="arrow_carrot-down"></span>
+                    </button>
                     <ul>
-                        <li>EUR</li>
-                        <li>USD</li>
+                        <li><a href="../login.html">Entrar</a></li>
+                        <li><a href="../cadastro.html">Cadastre-se</a></li>
                     </ul>
                 </li>
-                <li>ENG <span class="arrow_carrot-down"></span>
-                    <ul>
-                        <li>Spanish</li>
-                        <li>ENG</li>
-                    </ul>
-                </li>
-                <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
             </ul>
         </div>
     </div>
@@ -81,33 +67,20 @@
                         <div class="header__top__inner">
                             <div class="header__top__left">
                                 <ul>
-                                    <li>USD <span class="arrow_carrot-down"></span>
+                                    <li class="conta-menu">
+                                        <button type="button" class="conta-menu__botao" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Minha conta <span class="arrow_carrot-down"></span>
+                                        </button>
                                         <ul>
-                                            <li>EUR</li>
-                                            <li>USD</li>
+                                            <li><a href="../login.html">Entrar</a></li>
+                                            <li><a href="../cadastro.html">Cadastre-se</a></li>
                                         </ul>
                                     </li>
-                                    <li>ENG <span class="arrow_carrot-down"></span>
-                                        <ul>
-                                            <li>Spanish</li>
-                                            <li>ENG</li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
                                 </ul>
                             </div>
                             <div class="header__logo">
                                 <a href="../index.html"><img src="../img/logo.png" alt=""></a>
-                            </div>
-                            <div class="header__top__right">
-                                <div class="header__top__right__links">
-                                    <a href="#" class="search-switch"><img src="../img/icon/search.png" alt=""></a>
-                                    <a href="#"><img src="../img/icon/heart.png" alt=""></a>
-                                </div>
-                                <div class="header__top__right__cart">
-                                    <a href="#"><img src="../img/icon/cart.png" alt=""> <span>0</span></a>
-                                    <div class="cart__price">Cart: <span>$0.00</span></div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -121,20 +94,27 @@
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li><a href="../index.html">Home</a></li>
-                            <li><a href="../about.html">About</a></li>
-                            <li><a href="../shop.html">Shop</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="dropdown">
-                                    <li><a href="../shop-details.html">Shop Details</a></li>
-                                    <li><a href="../shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="../checkout.html">Check Out</a></li>
-                                    <li><a href="../wisslist.html">Wisslist</a></li>
-                                    <li><a href="../Class.html">Class</a></li>
-                                    <li><a href="../blog-details.html">Blog Details</a></li>
+                            <li><a href="../sobre.html">Sobre</a></li>
+                            <li><a href="#">Disciplinas</a>
+                                <ul class="dropdown dropdown--disciplinas">
+                                    <li><a href="../disciplinas.html?d=portugues">Português</a></li>
+                                    <li><a href="../disciplinas.html?d=interpretacao-de-texto">Interpretação de
+                                            Texto</a>
+                                    </li>
+                                    <li><a href="../disciplinas.html?d=ingles">Inglês</a></li>
+                                    <li><a href="../disciplinas.html?d=espanhol">Espanhol</a></li>
+                                    <li><a href="../disciplinas.html?d=matematica">Matemática</a></li>
+                                    <li><a href="../disciplinas.html?d=fisica">Física</a></li>
+                                    <li><a href="../disciplinas.html?d=quimica">Química</a></li>
+                                    <li><a href="../disciplinas.html?d=biologia">Biologia</a></li>
+                                    <li><a href="../disciplinas.html?d=historia">História</a></li>
+                                    <li><a href="../disciplinas.html?d=filosofia">Filosofia</a></li>
+                                    <li><a href="../disciplinas.html?d=sociologia">Sociologia</a></li>
+                                    <li><a href="../disciplinas.html?d=geografia">Geografia</a></li>
                                 </ul>
                             </li>
-                            <li class="active"><a href="../temas-redacao.html">Temas de Redação</a></li>
-                            <li><a href="../contact.html">Contact</a></li>
+                            <li><a href="../temas-redacao.html">Temas de Redação</a></li>
+                            <li><a href="../contato.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
