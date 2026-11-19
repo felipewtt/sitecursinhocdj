@@ -49,6 +49,11 @@
         $(".offcanvas-menu-overlay").removeClass("active");
     });
 
+    // itens do menu que só abrem lista (href="#") não devem rolar a página
+    $('.header__menu a[href="#"]').on('click', function (e) {
+        e.preventDefault();
+    });
+
     //Menu Minha conta (Entrar / Cadastre-se)
     $('.conta-menu__botao').on('click', function (e) {
         e.stopPropagation();
