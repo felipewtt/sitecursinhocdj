@@ -249,6 +249,59 @@
         filtrarMateriais();
     }
 
+    /*-----------------------------------------
+    Temas de redação: eixos e busca
+------------------------------------------*/
+    if ($('.tema-filtro').length) {
+        var eixoAtual = new URLSearchParams(window.location.search).get('eixo') || '';
+
+        var temEixo = function ($cartao, eixo) {
+            return (' ' + ($cartao.data('eixos') || '') + ' ').indexOf(' ' + eixo + ' ') !== -1;
+        };
+
+        // contagem de temas por eixo, calculada a partir dos cartões
+        $('#lista-eixos a').each(function () {
+            var eixo = $(this).data('eixo') || '';
+            var total = !eixo
+                ? $('.tema-filtro').length
+                : $('.tema-filtro').filter(function () { return temEixo($(this), eixo); }).length;
+            $(this).find('span').text(total < 10 ? '0' + total : total);
+        });
+
+        var filtrarTemas = function () {
+            var busca = $('#busca-tema').val().toLowerCase().trim();
+            var visiveis = 0;
+
+            $('.tema-filtro').each(function () {
+                var $cartao = $(this);
+                var okEixo = !eixoAtual || temEixo($cartao, eixoAtual);
+                var okBusca = !busca || $cartao.find('h2').text().toLowerCase().indexOf(busca) !== -1;
+                var mostrar = okEixo && okBusca;
+                $cartao.toggle(mostrar);
+                if (mostrar) { visiveis++; }
+            });
+
+            $('#temas-vazio').toggle(visiveis === 0);
+
+            $('#lista-eixos a').removeClass('ativo').filter(function () {
+                return ($(this).data('eixo') || '') === eixoAtual;
+            }).addClass('ativo');
+        };
+
+        $('#lista-eixos a').on('click', function (e) {
+            e.preventDefault();
+            eixoAtual = $(this).data('eixo') || '';
+            filtrarTemas();
+        });
+        $('#busca-tema').on('input', filtrarTemas);
+        $('#form-busca-tema').on('submit', function (e) {
+            e.preventDefault();
+            filtrarTemas();
+        });
+
+        filtrarTemas();
+    }
+
     /*--------------------------
         Select
     ----------------------------*/

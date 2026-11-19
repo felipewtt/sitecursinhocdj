@@ -3007,7 +3007,7 @@ ol {
 }
 
 .blog__sidebar__item .blog__sidebar__item__categories ul li:hover a {
-  text-decoration: line-through;
+  text-decoration: none;
 }
 
 .blog__sidebar__item .blog__sidebar__item__categories ul li:hover a span {
@@ -4815,4 +4815,9 @@ ol {
 
 .material__pic--outro {
   background: #8d8d8d;
+}
+
+.blog__sidebar__item__categories ul li a.ativo {
+  color: #8C1FAC;
+  font-weight: 700;
 }
