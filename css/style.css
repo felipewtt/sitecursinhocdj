@@ -4770,3 +4770,49 @@ ol {
   line-height: 1.5;
   margin-top: 48px;
 }
+
+.header__menu ul li .dropdown.dropdown--disciplinas {
+  width: 230px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*---------------------
+  Materiais (página da disciplina)
+-----------------------*/
+.material__pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #8C1FAC;
+}
+
+.material__pic i {
+  font-size: 80px;
+  line-height: 1;
+}
+
+.material__pic--pdf {
+  background: #8C1FAC;
+}
+
+.material__pic--video {
+  background: #6a1b83;
+}
+
+.material__pic--lista {
+  background: #a53bc4;
+}
+
+.material__pic--slide {
+  background: #7a2a95;
+}
+
+.material__pic--texto {
+  background: #5c5c5c;
+}
+
+.material__pic--outro {
+  background: #8d8d8d;
+}

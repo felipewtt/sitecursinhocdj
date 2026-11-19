@@ -190,6 +190,60 @@
         }
     });
 
+    /*-----------------------------------------
+        Página da disciplina: título, filtro e busca
+    ------------------------------------------*/
+    if ($('.material-filtro').length) {
+        var NOMES_DISCIPLINAS = {
+            'portugues': 'Português',
+            'interpretacao-de-texto': 'Interpretação de Texto',
+            'ingles': 'Inglês',
+            'espanhol': 'Espanhol',
+            'matematica': 'Matemática',
+            'fisica': 'Física',
+            'quimica': 'Química',
+            'biologia': 'Biologia',
+            'historia': 'História',
+            'filosofia': 'Filosofia',
+            'sociologia': 'Sociologia',
+            'geografia': 'Geografia'
+        };
+
+        // título da página conforme o ?d= da URL
+        var nomeDisciplina = NOMES_DISCIPLINAS[new URLSearchParams(window.location.search).get('d')];
+        if (nomeDisciplina) {
+            $('#disciplina-nome, #disciplina-nome-trilha').text(nomeDisciplina);
+            document.title = nomeDisciplina + ' | Cursinho Carolina Maria de Jesus';
+        }
+
+        // filtro por tipo e busca por título
+        var filtrarMateriais = function () {
+            var tipo = $('#filtro-tipo').val();
+            var busca = $('#filtro-busca').val().toLowerCase().trim();
+            var visiveis = 0;
+
+            $('.material-filtro').each(function () {
+                var $cartao = $(this);
+                var okTipo = !tipo || $cartao.data('tipo') === tipo;
+                var okBusca = !busca || $cartao.find('h6').text().toLowerCase().indexOf(busca) !== -1;
+                var mostrar = okTipo && okBusca;
+                $cartao.toggle(mostrar);
+                if (mostrar) { visiveis++; }
+            });
+
+            $('#materiais-contagem').text(visiveis + (visiveis === 1 ? ' material encontrado' : ' materiais encontrados'));
+            $('#materiais-vazio').toggle(visiveis === 0);
+        };
+
+        $('#filtro-tipo').on('change', filtrarMateriais);
+        $('#filtro-busca').on('input', filtrarMateriais);
+        $('.shop__option__search form').on('submit', function (e) {
+            e.preventDefault();
+            filtrarMateriais();
+        });
+        filtrarMateriais();
+    }
+
     /*--------------------------
         Select
     ----------------------------*/
