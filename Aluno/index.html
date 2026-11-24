@@ -7,7 +7,7 @@
     <meta name="keywords" content="Cake, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cake | Template</title>
+    <title>Cursinho Carolina Maria de Jesus</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
@@ -18,16 +18,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="../css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="../css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
 </head>
 
 <body>
@@ -39,35 +39,21 @@
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__cart">
-            <div class="offcanvas__cart__links">
-                <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                <a href="#"><img src="img/icon/heart.png" alt=""></a>
-            </div>
-            <div class="offcanvas__cart__item">
-                <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                <div class="cart__price">Cart: <span>$0.00</span></div>
-            </div>
-        </div>
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <a href="./index.html"><img src="../img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__option">
             <ul>
-                <li>USD <span class="arrow_carrot-down"></span>
+                <li class="conta-menu">
+                    <button type="button" class="conta-menu__botao" aria-haspopup="true" aria-expanded="false">
+                        Minha conta <span class="arrow_carrot-down"></span>
+                    </button>
                     <ul>
-                        <li>EUR</li>
-                        <li>USD</li>
+                        <li><a href="./login.html">Entrar</a></li>
+                        <li><a href="./cadastro.html">Cadastre-se</a></li>
                     </ul>
                 </li>
-                <li>ENG <span class="arrow_carrot-down"></span>
-                    <ul>
-                        <li>Spanish</li>
-                        <li>ENG</li>
-                    </ul>
-                </li>
-                <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
             </ul>
         </div>
     </div>
@@ -82,33 +68,20 @@
                         <div class="header__top__inner">
                             <div class="header__top__left">
                                 <ul>
-                                    <li>USD <span class="arrow_carrot-down"></span>
+                                    <li class="conta-menu">
+                                        <button type="button" class="conta-menu__botao" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Minha conta <span class="arrow_carrot-down"></span>
+                                        </button>
                                         <ul>
-                                            <li>EUR</li>
-                                            <li>USD</li>
+                                            <li><a href="./login.html">Entrar</a></li>
+                                            <li><a href="./cadastro.html">Cadastre-se</a></li>
                                         </ul>
                                     </li>
-                                    <li>ENG <span class="arrow_carrot-down"></span>
-                                        <ul>
-                                            <li>Spanish</li>
-                                            <li>ENG</li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
                                 </ul>
                             </div>
                             <div class="header__logo">
                                 <a href="./index.html"><img src="img/logo.png" alt=""></a>
-                            </div>
-                            <div class="header__top__right">
-                                <div class="header__top__right__links">
-                                    <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                                    <a href="#"><img src="img/icon/heart.png" alt=""></a>
-                                </div>
-                                <div class="header__top__right__cart">
-                                    <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                                    <div class="cart__price">Cart: <span>$0.00</span></div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -121,20 +94,26 @@
                 <div class="col-lg-12">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./about.html">About</a></li>
-                            <li><a href="./shop.html">Shop</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./wisslist.html">Wisslist</a></li>
-                                    <li><a href="./Class.html">Class</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="../sobre.html">Sobre</a></li>
+                            <li><a href="#">Disciplinas</a>
+                                <ul class="dropdown dropdown--disciplinas">
+                                    <li><a href="./disciplinas.html?d=portugues">Português</a></li>
+                                    <li><a href="./disciplinas.html?d=interpretacao-de-texto">Interpretação de Texto</a>
+                                    </li>
+                                    <li><a href="./disciplinas.html?d=ingles">Inglês</a></li>
+                                    <li><a href="./disciplinas.html?d=espanhol">Espanhol</a></li>
+                                    <li><a href="./disciplinas.html?d=matematica">Matemática</a></li>
+                                    <li><a href="./disciplinas.html?d=fisica">Física</a></li>
+                                    <li><a href="./disciplinas.html?d=quimica">Química</a></li>
+                                    <li><a href="./disciplinas.html?d=biologia">Biologia</a></li>
+                                    <li><a href="./disciplinas.html?d=historia">História</a></li>
+                                    <li><a href="./disciplinas.html?d=filosofia">Filosofia</a></li>
+                                    <li><a href="./disciplinas.html?d=sociologia">Sociologia</a></li>
+                                    <li><a href="./disciplinas.html?d=geografia">Geografia</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./temas-redacao.html">Temas de Redação</a></li>
                             <li><a href="./contato.html">Contact</a></li>
                         </ul>
                     </nav>
@@ -153,7 +132,7 @@
                         <div class="col-lg-8">
                             <div class="hero__text">
                                 <h2>Transformando vidas através da educação popular</h2>
-                                <a href="#" class="primary-btn">Inscreva-se</a>
+                                <a href="cadastro.html" class="primary-btn">Inscreva-se</a>
                             </div>
                         </div>
                     </div>
@@ -182,37 +161,41 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="about__text">
                         <div class="section-title">
-                            <span>About Cake shop</span>
-                            <h2>Cakes and bakes from the house of Queens!</h2>
+                            <span>Sobre o cursinho</span>
+                            <h2>Educação popular, feita por quem acredita nela</h2>
                         </div>
-                        <p>The "Cake Shop" is a Jordanian Brand that started as a small family business. The owners are
-                            Dr. Iyad Sultan and Dr. Sereen Sharabati, supported by a staff of 80 employees.</p>
+                        <p>O Cursinho Popular Carolina Maria de Jesus nasceu em Currais Novos a partir do desejo de uma
+                            família de levar oportunidade de estudo para quem não pode pagar um cursinho particular.
+                            Hoje
+                            funciona no IFRN, de segunda a quinta, e une a preparação para o ENEM ao debate crítico.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
-                    <div class="about__bar">
-                        <div class="about__bar__item">
-                            <p>Cake design</p>
-                            <div id="bar1" class="barfiller">
-                                <div class="tipWrap"><span class="tip"></span></div>
-                                <span class="fill" data-percentage="95"></span>
-                            </div>
-                        </div>
-                        <div class="about__bar__item">
-                            <p>Cake Class</p>
-                            <div id="bar2" class="barfiller">
-                                <div class="tipWrap"><span class="tip"></span></div>
-                                <span class="fill" data-percentage="80"></span>
-                            </div>
-                        </div>
-                        <div class="about__bar__item">
-                            <p>Cake Recipes</p>
-                            <div id="bar3" class="barfiller">
-                                <div class="tipWrap"><span class="tip"></span></div>
-                                <span class="fill" data-percentage="90"></span>
-                            </div>
-                        </div>
-                    </div>
+                    <ol class="linha-tempo">
+                        <li class="linha-tempo__item">
+                            <span class="linha-tempo__data">19 de novembro de 2019</span>
+                            <h5>Fundação oficial</h5>
+                            <p>Nasce o cursinho popular em Currais Novos, inspirado na Rede Emancipa e nas ideias de
+                                Paulo Freire.</p>
+                        </li>
+                        <li class="linha-tempo__item">
+                            <span class="linha-tempo__data">7 de março de 2020</span>
+                            <h5>Primeira aula</h5>
+                            <p>306 alunos presentes, de quase 500 inscritos, na Escola Estadual Tempo Integral Tristão
+                                de Barros.</p>
+                        </li>
+                        <li class="linha-tempo__item">
+                            <span class="linha-tempo__data">2025</span>
+                            <h5>Edital do CPOP</h5>
+                            <p>O projeto é contemplado com apoio financeiro e pedagógico: bolsa mensal de R$ 200 para os
+                                alunos e remuneração para os professores.</p>
+                        </li>
+                        <li class="linha-tempo__item">
+                            <span class="linha-tempo__data">Hoje</span>
+                            <h5>No IFRN Currais Novos</h5>
+                            <p>Aulas de segunda a quinta, das 19h às 22h, com 40 alunos atendidos diretamente.</p>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </div>
@@ -266,7 +249,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6 product-filter" data-category="humanas">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/disciplinas/historia.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="../img/disciplinas/historia.jpg">
                             <div class="product__label">
                                 <span>Humanas</span>
                             </div>
@@ -282,7 +265,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 product-filter" data-category="humanas">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/disciplinas/filosofia.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="../img/disciplinas/filosofia.jpg">
                             <div class="product__label">
                                 <span>Humanas</span>
                             </div>
@@ -298,7 +281,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 product-filter" data-category="naturezas">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/disciplinas/quimica.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="../img/disciplinas/quimica.jpg">
                             <div class="product__label">
                                 <span>Naturezas</span>
                             </div>
@@ -314,7 +297,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 product-filter" data-category="exatas">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/disciplinas/matematica.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="../img/disciplinas/matematica.jpg">
                             <div class="product__label">
                                 <span>Exatas</span>
                             </div>
@@ -330,7 +313,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 product-filter" data-category="naturezas">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/disciplinas/biologia.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="../img/disciplinas/biologia.jpg">
                             <div class="product__label">
                                 <span>Naturezas</span>
                             </div>
@@ -346,7 +329,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 product-filter" data-category="humanas">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/disciplinas/sociologia.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="../img/disciplinas/sociologia.jpg">
                             <div class="product__label">
                                 <span>Humanas</span>
                             </div>
@@ -362,7 +345,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 product-filter" data-category="linguagens">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/disciplinas/portugues.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="../img/disciplinas/portugues.jpg">
                             <div class="product__label">
                                 <span>Linguagens</span>
                             </div>
@@ -378,7 +361,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 product-filter" data-category="humanas">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/disciplinas/geografia.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="../img/disciplinas/geografia.jpg">
                             <div class="product__label">
                                 <span>Humanas</span>
                             </div>
@@ -394,7 +377,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 product-filter" data-category="linguagens">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/disciplinas/interpretacao.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="../img/disciplinas/interpretacao.jpg">
                             <div class="product__label">
                                 <span>Linguagens</span>
                             </div>
@@ -410,7 +393,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 product-filter" data-category="linguagens">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/disciplinas/ingles.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="../img/disciplinas/ingles.jpg">
                             <div class="product__label">
                                 <span>Linguagens</span>
                             </div>
@@ -426,7 +409,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 product-filter" data-category="naturezas">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/disciplinas/fisica.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="../img/disciplinas/fisica.jpg">
                             <div class="product__label">
                                 <span>Naturezas</span>
                             </div>
@@ -442,7 +425,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 product-filter" data-category="linguagens">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/disciplinas/espanhol.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="../img/disciplinas/espanhol.jpg">
                             <div class="product__label">
                                 <span>Linguagens</span>
                             </div>
@@ -460,38 +443,6 @@
         </div>
     </section>
     <!-- Product Section End -->
-
-    <!-- Class Section Begin -->
-    <section class="class spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="class__form">
-                        <div class="section-title">
-                            <span>Class cakes</span>
-                            <h2>Made from your <br />own hands</h2>
-                        </div>
-                        <form action="#">
-                            <input type="text" placeholder="Name">
-                            <input type="text" placeholder="Phone">
-                            <select>
-                                <option value="">Studying Class</option>
-                                <option value="">Writting Class</option>
-                                <option value="">Reading Class</option>
-                            </select>
-                            <input type="text" placeholder="Type your requirements">
-                            <button type="submit" class="site-btn">registration</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="class__video set-bg" data-setbg="img/class-video.jpg">
-                <a href="https://www.youtube.com/watch?v=8PJ3_p7VqHw&list=RD8PJ3_p7VqHw&start_radio=1"
-                    class="play-btn video-popup"><i class="fa fa-play"></i></a>
-            </div>
-        </div>
-    </section>
-    <!-- Class Section End -->
 
     <!-- Team Section Begin -->
     <section class="team spad">
@@ -763,6 +714,80 @@
     </section>
     <!-- Testimonial Section End -->
 
+    <!-- Avaliação Section Begin -->
+    <section class="avaliacao spad">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8">
+                    <div class="avaliacao__form">
+                        <div class="section-title text-center">
+                            <span>Conte sua experiência</span>
+                            <h2>Avalie o <br />cursinho</h2>
+                        </div>
+                        <form action="#">
+                            <label for="av-nome" class="sr-only">Seu nome</label>
+                            <input type="text" id="av-nome" name="nome" placeholder="Seu nome" required>
+
+                            <label for="av-ano" class="sr-only">Ano em que estudou no cursinho</label>
+                            <select id="av-ano" name="ano" class="sem-nice" required>
+                                <option value="" disabled selected>Ano em que estudou no cursinho</option>
+                            </select>
+
+                            <fieldset class="avaliacao__estrelas">
+                                <legend>Sua nota para o cursinho</legend>
+                                <div class="avaliacao__estrelas-grupo">
+                                    <input type="radio" id="estrela50" name="nota" value="5" required>
+                                    <label for="estrela50" title="5 estrelas"><span class="sr-only">5
+                                            estrelas</span></label>
+                                    <input type="radio" id="estrela45" name="nota" value="4.5">
+                                    <label for="estrela45" title="4,5 estrelas"><span class="sr-only">4,5
+                                            estrelas</span></label>
+                                    <input type="radio" id="estrela40" name="nota" value="4">
+                                    <label for="estrela40" title="4 estrelas"><span class="sr-only">4
+                                            estrelas</span></label>
+                                    <input type="radio" id="estrela35" name="nota" value="3.5">
+                                    <label for="estrela35" title="3,5 estrelas"><span class="sr-only">3,5
+                                            estrelas</span></label>
+                                    <input type="radio" id="estrela30" name="nota" value="3">
+                                    <label for="estrela30" title="3 estrelas"><span class="sr-only">3
+                                            estrelas</span></label>
+                                    <input type="radio" id="estrela25" name="nota" value="2.5">
+                                    <label for="estrela25" title="2,5 estrelas"><span class="sr-only">2,5
+                                            estrelas</span></label>
+                                    <input type="radio" id="estrela20" name="nota" value="2">
+                                    <label for="estrela20" title="2 estrelas"><span class="sr-only">2
+                                            estrelas</span></label>
+                                    <input type="radio" id="estrela15" name="nota" value="1.5">
+                                    <label for="estrela15" title="1,5 estrela"><span class="sr-only">1,5
+                                            estrela</span></label>
+                                    <input type="radio" id="estrela10" name="nota" value="1">
+                                    <label for="estrela10" title="1 estrela"><span class="sr-only">1
+                                            estrela</span></label>
+                                    <input type="radio" id="estrela05" name="nota" value="0.5">
+                                    <label for="estrela05" title="0,5 estrela"><span class="sr-only">0,5
+                                            estrela</span></label>
+                                </div>
+                            </fieldset>
+
+                            <label for="av-relato" class="sr-only">Seu relato</label>
+                            <textarea id="av-relato" name="relato"
+                                placeholder="Conte como foi sua experiência no cursinho" required></textarea>
+
+                            <div class="avaliacao__consent">
+                                <input type="checkbox" id="av-consent" name="consentimento" required>
+                                <label for="av-consent">Autorizo a publicação do meu nome e do meu relato no site do
+                                    cursinho.</label>
+                            </div>
+
+                            <button type="submit" class="site-btn">enviar avaliação</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Avaliação Section End -->
+
     <!-- Instagram Section Begin -->
     <section class="instagram spad">
         <div class="container">
@@ -782,32 +807,32 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic">
-                                <img src="img/instagram/instagram-1.jpg" alt="">
+                                <img src="../img/instagram/Instagram1.jpeg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic middle__pic">
-                                <img src="img/instagram/instagram-2.jpg" alt="">
+                                <img src="../img/instagram/Instagram2.jpeg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic">
-                                <img src="img/instagram/instagram-3.jpg" alt="">
+                                <img src="../img/instagram/Instagram3.jpeg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic">
-                                <img src="img/instagram/instagram-4.jpg" alt="">
+                                <img src="../img/instagram/Instagram4.jpeg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic middle__pic">
-                                <img src="img/instagram/instagram-5.jpg" alt="">
+                                <img src="../img/instagram/Instagram5.jpeg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic">
-                                <img src="img/instagram/instagram-3.jpg" alt="">
+                                <img src="../img/instagram/Instagram6.jpeg" alt="">
                             </div>
                         </div>
                     </div>
@@ -922,15 +947,15 @@
     <!-- Search End -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery.barfiller.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.nice-select.min.js"></script>
+    <script src="../js/jquery.barfiller.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/jquery.slicknav.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery.nicescroll.min.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
