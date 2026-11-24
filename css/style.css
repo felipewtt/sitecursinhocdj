@@ -4821,3 +4821,18 @@ ol {
   color: #8C1FAC;
   font-weight: 700;
 }
+
+/* Faixa de boas-vindas (sem slide) */
+.hero--boas-vindas {
+  margin-bottom: 40px;
+}
+
+.hero--boas-vindas .hero__item {
+  height: 560px;
+}
+
+.hero--boas-vindas .hero__text h2 {
+  top: 0;
+  opacity: 1;
+  margin-bottom: 0;
+}
