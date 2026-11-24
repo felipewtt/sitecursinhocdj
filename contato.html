@@ -37,35 +37,21 @@
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__cart">
-            <div class="offcanvas__cart__links">
-                <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                <a href="#"><img src="img/icon/heart.png" alt=""></a>
-            </div>
-            <div class="offcanvas__cart__item">
-                <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                <div class="cart__price">Cart: <span>$0.00</span></div>
-            </div>
-        </div>
         <div class="offcanvas__logo">
             <a href="./index.html"><img src="img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__option">
             <ul>
-                <li>USD <span class="arrow_carrot-down"></span>
+                <li class="conta-menu">
+                    <button type="button" class="conta-menu__botao" aria-haspopup="true" aria-expanded="false">
+                        Minha conta <span class="arrow_carrot-down"></span>
+                    </button>
                     <ul>
-                        <li>EUR</li>
-                        <li>USD</li>
+                        <li><a href="./login.html">Entrar</a></li>
+                        <li><a href="./cadastro.html">Cadastre-se</a></li>
                     </ul>
                 </li>
-                <li>ENG <span class="arrow_carrot-down"></span>
-                    <ul>
-                        <li>Spanish</li>
-                        <li>ENG</li>
-                    </ul>
-                </li>
-                <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
             </ul>
         </div>
     </div>
@@ -80,33 +66,20 @@
                         <div class="header__top__inner">
                             <div class="header__top__left">
                                 <ul>
-                                    <li>USD <span class="arrow_carrot-down"></span>
+                                    <li class="conta-menu">
+                                        <button type="button" class="conta-menu__botao" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Minha conta <span class="arrow_carrot-down"></span>
+                                        </button>
                                         <ul>
-                                            <li>EUR</li>
-                                            <li>USD</li>
+                                            <li><a href="./login.html">Entrar</a></li>
+                                            <li><a href="./cadastro.html">Cadastre-se</a></li>
                                         </ul>
                                     </li>
-                                    <li>ENG <span class="arrow_carrot-down"></span>
-                                        <ul>
-                                            <li>Spanish</li>
-                                            <li>ENG</li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
                                 </ul>
                             </div>
                             <div class="header__logo">
                                 <a href="./index.html"><img src="img/logo.png" alt=""></a>
-                            </div>
-                            <div class="header__top__right">
-                                <div class="header__top__right__links">
-                                    <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                                    <a href="#"><img src="img/icon/heart.png" alt=""></a>
-                                </div>
-                                <div class="header__top__right__cart">
-                                    <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                                    <div class="cart__price">Cart: <span>$0.00</span></div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -120,20 +93,8 @@
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li><a href="./index.html">Home</a></li>
-                            <li><a href="./about.html">About</a></li>
-                            <li><a href="./shop.html">Shop</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./wisslist.html">Wisslist</a></li>
-                                    <li><a href="./Class.html">Class</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li class="active"><a href="./contato.html">Contact</a></li>
+                            <li><a href="./sobre.html">Sobre</a></li>
+                            <li><a href="./contato.html">Contato</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -150,71 +111,60 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-4 col-md-7">
                             <div class="map__inner">
-                                <h6>COlorado</h6>
+                                <h6>Onde estamos</h6>
                                 <ul>
-                                    <li>1000 Lakepoint Dr, Frisco, CO 80443, USA</li>
-                                    <li>Sweetcake@support.com</li>
-                                    <li>+1 800-786-1000</li>
+                                    <li>IFRN – Campus Currais Novos</li>
+                                    <li>Rua Manoel Lopes Filho, 773 – Valfredo Galvão, Currais Novos – RN</li>
+                                    <li>CEP 59380-000</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="map__iframe">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10784.188505644011!2d19.053119335158936!3d47.48899529453826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1543907528304"
-                        height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe title="Mapa do IFRN – Campus Currais Novos"
+                        src="https://www.google.com/maps?q=Rua+Manoel+Lopes+Filho,+773,+Currais+Novos,+RN&output=embed"
+                        height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             <div class="contact__address">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="contact__address__item">
-                            <h6>san bernardino</h6>
+                            <h6>Horário das aulas</h6>
                             <ul>
                                 <li>
+                                    <span class="icon_clock_alt"></span>
+                                    <p>Segunda a quinta-feira, das 19h às 22h</p>
+                                </li>
+                                <li>
                                     <span class="icon_pin_alt"></span>
-                                    <p>795 W 5th St, San Bernardino, CA 92410, USA</p>
-                                </li>
-                                <li><span class="icon_headphones"></span>
-                                    <p>+1 800-786-1000</p>
-                                </li>
-                                <li><span class="icon_mail_alt"></span>
-                                    <p>Sweetcake@support.com</p>
+                                    <p>No Campus Currais Novos do IFRN</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="contact__address__item">
-                            <h6>Los angeles</h6>
+                            <h6>Redes sociais</h6>
                             <ul>
                                 <li>
-                                    <span class="icon_pin_alt"></span>
-                                    <p>639 S Spring St, Los Angeles, CA 90014, USA</p>
-                                </li>
-                                <li><span class="icon_headphones"></span>
-                                    <p>+1 213-612-3000</p>
-                                </li>
-                                <li><span class="icon_mail_alt"></span>
-                                    <p>Sweetcake@support.com</p>
+                                    <span class="fa fa-instagram"></span>
+                                    <p><a href="https://www.instagram.com/carolinadejesuscp/" target="_blank"
+                                            rel="noopener">@carolinadejesuscp</a></p>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="contact__address__item">
-                            <h6>san bernardino</h6>
+                            <h6>E-mail</h6>
                             <ul>
                                 <li>
-                                    <span class="icon_pin_alt"></span>
-                                    <p>1000 Lakepoint Dr, Frisco, CO 80443, USA</p>
-                                </li>
-                                <li><span class="icon_headphones"></span>
-                                    <p>+1 800-786-1000</p>
-                                </li>
-                                <li><span class="icon_mail_alt"></span>
-                                    <p>Sweetcake@support.com</p>
+                                    <span class="icon_mail_alt"></span>
+                                    <!-- TROCAR pelo e-mail do cursinho -->
+                                    <p>email-do-cursinho@exemplo.com</p>
                                 </li>
                             </ul>
                         </div>
@@ -224,13 +174,11 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="contact__text">
-                        <h3>Contact With us</h3>
+                        <h3>Fale com a gente</h3>
                         <ul>
-                            <li>Representatives or Advisors are available:</li>
-                            <li>Mon-Fri: 5:00am to 9:00pm</li>
-                            <li>Sat-Sun: 6:00am to 9:00pm</li>
+                            <li>Tem dúvidas sobre as inscrições, as aulas ou os materiais? Escreva para nós.</li>
+                            <li>Aulas: segunda a quinta, das 19h às 22h</li>
                         </ul>
-                        <img src="img/cake-piece.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -238,14 +186,20 @@
                         <form action="#">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Name">
+                                    <label for="ct-nome" class="sr-only">Seu nome</label>
+                                    <input type="text" id="ct-nome" name="nome" placeholder="Seu nome"
+                                        autocomplete="name" required>
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Email">
+                                    <label for="ct-email" class="sr-only">Seu e-mail</label>
+                                    <input type="email" id="ct-email" name="email" placeholder="Seu e-mail"
+                                        autocomplete="email" required>
                                 </div>
                                 <div class="col-lg-12">
-                                    <textarea placeholder="Message"></textarea>
-                                    <button type="submit" class="site-btn">Send Us</button>
+                                    <label for="ct-msg" class="sr-only">Sua mensagem</label>
+                                    <textarea id="ct-msg" name="mensagem" placeholder="Sua mensagem"
+                                        required></textarea>
+                                    <button type="submit" class="site-btn">Enviar mensagem</button>
                                 </div>
                             </div>
                         </form>
